@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dr. Berdugo</title>
+
+    <link rel="icon" type="image/png" href="img/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <section class="hero-header">
+        <div>
+          <h1 class="dr-name">Dr. Jahzel Berdugo</h1>
+          <p class="dr-specialty">Especialista en Psiquiatría</p>
+        </div>
+        <div class="header-buttons">
+          <div><p class="dr-info">Agenda tu cita:</p></div>
+          <button
+            onclick="
+              window.open(
+                'https://wa.me/541130171421?text=Hola,%20Dr.%20Berdugo.%20Deseo%20solicitar%20informaci%C3%B3n%20para%20agendar%20una%20cita.',
+                '_blank',
+              )
+            "
+            class="whatsapp-button"
+          >
+            Whatsapp
+          </button>
+          <a
+            href="https://crontu.com.ar/berdugo-jahzel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-btn btn-crontu btn-crontu-header"
+            style="max-width: 120px; padding: 8px 20px; font-size: 15px"
+          >
+            Crontu
+          </a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img
+          src="img/hero-desktop.jpg"
+          alt="Portada de informacion para contactar"
+          class="hero-desktop"
+        />
+        <img
+          src="img/hero.jpg"
+          alt="Portada de informacion para contactar"
+          class="hero-image"
+        />
+      </section>
+
+      <section class="about">
+        <div class="about-image-container">
+          <img
+            src="img/doctormod.jpg"
+            alt="Dr. Jahzel Berdugo"
+            class="doctor-profile-img"
+          />
+        </div>
+
+        <div class="wave-divider">
+          <svg
+            viewBox="0 0 1440 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"
+              fill="#e9ecef"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="about-content">
+          <div class="container">
+            <span class="about-title-prefix">DR.</span>
+            <h2 class="about-name">JAHZEL A. BERDUGO E.</h2>
+            <p class="about-specialty-blue">PSIQUIATRA</p>
+
+            <p class="about-text">
+              Médico especialista en Psiquiatría dedicado al diagnóstico y
+              tratamiento integral de la salud mental, combinando empatía y
+              rigor científico. Con cinco años de experiencia en entornos
+              clínicos y hospitalarios, ofrezco un espacio de atención seguro,
+              personalizado y enfocado en el bienestar y la recuperación de cada
+              paciente.
+            </p>
+          </div>
+        </div>
+
+        <div class="wave-divider wave-inverted">
+          <svg
+            viewBox="0 0 1440 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"
+              fill="#e9ecef"
+            ></path>
+          </svg>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h2 class="faq-main-title">PREGUNTAS FRECUENTES</h2>
+          <div class="faq-desc">
+            <p>
+              Es normal tener dudas antes de acudir a psiquiatría. Aquí respondo
+              las más comunes.
+            </p>
+            <div class="faq-footer">
+              <p class="faq-footer-text">
+                ¿Tu pregunta <strong>no está aquí?</strong>
+              </p>
+              <button
+                onclick="
+                  window.open(
+                    'https://wa.me/541130171421?text=Tengo%20una%20pregunta%20Dr.%20Berdugo:%20',
+                    '_blank',
+                  )
+                "
+                class="contact-btn whatsapp-button font-lato"
+              >
+                Escríbeme al<br />Whatsapp
+              </button>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span class="question-text"
+                  >¿Qué hace un psiquiatra y cómo saber cuándo debo acudir a
+                  uno?</span
+                >
+                <span class="icon-circle">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  El psiquiatra es un médico especializado en el diagnóstico y
+                  tratamiento de los trastornos mentales. A diferencia del
+                  psicólogo, puede prescribir medicamentos y tratar las bases
+                  biológicas del malestar. Es recomendable acudir cuando los
+                  síntomas afectan significativamente tu calidad de vida,
+                  trabajo, relaciones o bienestar emocional por periodos
+                  prolongados.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span class="question-text"
+                  >¿Cuándo es aconsejable recomendar a un ser querido acudir al
+                  psiquiatra?</span
+                >
+                <span class="icon-circle">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Cuando notes cambios mantenidos en el estado de ánimo,
+                  comportamiento o funcionamiento de un ser querido. Es
+                  importante hacerlo desde un lugar de preocupación genuina, sin
+                  juzgar, ofreciendo acompañamiento. Evita confrontaciones
+                  públicas y elige momentos íntimos y tranquilos para conversar.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span class="question-text"
+                  >¿Qué tipo de condiciones y trastornos trata?</span
+                >
+                <span class="icon-circle">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Atiendo trastornos de ansiedad, depresión, trastorno bipolar,
+                  TDAH en adolescentes y adultos, adicciones y patología dual,
+                  trastorno obsesivo-compulsivo, trastornos del espectro
+                  psicótico, problemas del sueño, estrés postraumático, fobias,
+                  y condiciones neurodegenerativas como Alzheimer y otras
+                  demencias.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span class="question-text"
+                  >¿Qué puedo esperar de una primera consulta?</span
+                >
+                <span class="icon-circle">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Una conversación donde me cuentas lo que te ocurre, tu
+                  historia personal y médica. Haré preguntas específicas para
+                  entender el cuadro clínico, y al final discutimos juntos una
+                  impresión diagnóstica preliminar y un plan de tratamiento, que
+                  puede incluir medicación, psicoterapia, o ambos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-footer-mobile">
+            <p class="faq-footer-text">
+              ¿Tu pregunta <strong>no está aquí?</strong>
+            </p>
+            <button
+              onclick="
+                window.open(
+                  'https://wa.me/541130171421?text=Tengo%20una%20pregunta%20Dr.%20Berdugo:%20',
+                  '_blank',
+                )
+              "
+              class="whatsapp-button font-lato"
+            >
+              Escríbeme al<br />Whatsapp
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="contact-header">
+            <p class="contact-subtitle">ESTOY DISPONIBLE PARA</p>
+            <h2 class="contact-title">ASISTIRTE</h2>
+          </div>
+
+          <p class="contact-instruction">
+            Contáctame y agenda tu cita<br />por cualquiera de estos medios:
+          </p>
+
+          <div class="contact-buttons-group">
+            <a
+              href="https://wa.me/541130171421?text=Hola,%20quiero%20coordinar%20un%20turno%20para%20una%20consulta%20con%20el%20Dr.%20Berdugo."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-btn whatsapp-button"
+            >
+              Whatsapp
+            </a>
+
+            <a
+              href="https://crontu.com.ar/berdugo-jahzel"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-btn btn-crontu"
+            >
+              Crontu
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-branding">
+          <h2 class="footer-dr-name">Dr. Jahzel Berdugo</h2>
+          <p class="footer-dr-specialty">ESPECIALISTA EN PSIQUIATRÍA</p>
+          <p class="footer-dr-tagline">
+            SERVICIO DE PSIQUIATRÍA VIRTUAL PARTICULAR
+          </p>
+        </div>
+
+        <div class="footer-contact-info">
+          <a href="tel:+541130171421" class="footer-link footer-phone"
+            >+54 11 30171421</a
+          >
+
+          <a
+            href="mailto:jahzel.berdugo@gmail.com"
+            class="footer-link footer-email"
+            >JAHZEL.BERDUGO@GMAIL.COM</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,817 @@
+/* ===========================
+   VARIABLES (Movidas arriba)
+=========================== */
+:root {
+  --primary-color: #4574de;
+  --secondary-color: #031926;
+  --text-light: #ffffff;
+  --text-dark: #181818;
+  --text-cyan: #41ffe6;
+}
+
+/* ===========================
+   RESET very important
+=========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden; /* Evita cualquier intento de scroll horizontal anormal */
+  width: 100%;
+}
+
+/* ===========================
+   ESTILOS BASE
+=========================== */
+.container {
+  width: min(1200px, 90%);
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px; /* <- Corregido: Se añadió 'px' */
+}
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  height: 220px;
+}
+
+/* ===========================
+   Nav Bar
+=========================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===========================
+   Header
+=========================== */
+.btn-crontu-header {
+  display: none;
+}
+
+.hero-header {
+  background-color: var(--secondary-color);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.dr-name {
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-bottom: 12px;
+  margin: 0;
+}
+
+.dr-specialty {
+  color: var(--text-cyan);
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 5px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+.dr-info {
+  display: none;
+}
+
+.whatsapp-button {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #072e06;
+  padding: 14px 36px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #50e36b, #43e198);
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* ===========================
+   Hero
+=========================== */
+.hero {
+  background: var(--primary-color);
+  width: 100%;
+  /* Flexbox para centrar */
+
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente (si tiene altura) */
+}
+.hero-desktop {
+  display: none;
+}
+
+.hero-image {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+/* ===========================
+   About
+=========================== */
+.about {
+  background-color: #ffffff; /* El fondo de arriba donde flota la foto es blanco */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.about-image-container-desktop {
+  display: none;
+}
+
+/* Contenedor de la foto para darle la sombra suave */
+.about-image-container {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.doctor-profile-img {
+  width: 70%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 20px;
+  /* Sombra suave e idéntica a la tarjeta de tu referencia */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* El divisor ondulado */
+.wave-divider {
+  width: 100%;
+  line-height: 0;
+  margin-top: 25px; /* Separación entre la foto y la curva */
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 80px; /* Controla qué tan pronunciada es la curva en celulares */
+}
+
+/* El bloque inferior con el texto */
+.about-content {
+  background-color: #e9ecef; /* Gris claro idéntico al 'fill' del SVG */
+  width: 100%;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  padding-bottom: 50px;
+  text-align: left; /* Alineado a la izquierda como la referencia */
+}
+
+/* Estilos de tipografía basados en tu imagen */
+.about-title-prefix {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: #181818;
+  line-height: 1.1;
+}
+
+.about-name {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #181818;
+  margin: 0 0 4px 0;
+}
+
+.about-specialty-blue {
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+.wave-inverted {
+  margin-top: -10px; /* Fuerza a la ola a subir y encajar con el bloque gris */
+  background-color: #ffffff; /* Pon aquí el color de la sección que viene DESPUÉS (ej: blanco) */
+}
+.wave-inverted svg {
+  transform: scaleX(-1) scaleY(-1);
+  display: block;
+  margin-bottom: -1px;
+}
+/* ===========================
+   FAQ
+=========================== */
+.faq-footer{
+  display: none;
+}
+.faq-desc{
+  display: none;
+}
+.faq {
+  background-color: #ffffff; /* Fondo blanco limpio como la imagen */
+  padding: 60px 0;
+}
+
+.faq-main-title {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  color: #111111;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eaeaea; /* Línea separadora gris muy sutil */
+}
+
+/* Botón contenedor de la pregunta */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  gap: 15px;
+}
+
+.question-text {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f151e; /* Color azul oscuro/grisáceo corporativo */
+  line-height: 1.4;
+}
+
+/* El círculo del botón más (+) */
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  border: 1px solid #cbd5e1; /* Borde sutil */
+  border-radius: 50%;
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 400;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Efecto hover simple para interacción */
+.faq-question:hover .icon-circle {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Contenedor oculto para la respuesta (por si luego usas JS) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.faq-answer p {
+  padding: 0 0 20px 0; /* Espaciado interno para el texto de la respuesta */
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Esta clase se la añadiremos dinámicamente con JavaScript al abrir la pregunta */
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Un valor lo suficientemente alto para que quepa el texto */
+}
+/* ===========================
+   FAQ Footer (Bloque Whatsapp)
+=========================== */
+.faq-footer-mobile {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.faq-footer-text {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #111111;
+  font-weight: 400;
+}
+
+.faq-footer-text strong {
+  font-weight: 700;
+}
+
+/* Modificación de tu botón para que acepte dos líneas de texto */
+.faq-footer-mobile .whatsapp-button {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 12px 45px;
+  text-align: center;
+}
+
+/* ===========================
+   Contact Section
+=========================== */
+.contact {
+  background-color: var(--secondary-color); /* Tu azul marino oscuro #031926 */
+  padding: 50px 0;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.contact-header {
+  margin-bottom: 35px;
+}
+
+.contact-subtitle {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin: 0 0 5px 0;
+  opacity: 0.9; /* Hace el texto un poquito más suave que el título principal */
+}
+
+.contact-title {
+  font-family: "Inter", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.contact-instruction {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  opacity: 0.85;
+}
+
+/* Contenedor para alinear los botones horizontalmente */
+.contact-buttons-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Espaciado exacto entre ambos botones */
+  width: 100%;
+}
+
+/* Estilos base compartidos para ambos botones */
+.contact-btn {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  text-decoration: none; /* Quita el subrayado por defecto de las etiquetas <a> */
+  text-align: center;
+
+  /* Sizing */
+  flex: 1; /* Hace que ambos botones midan exactamente lo mismo */
+  max-width: 150px; /* Evita que se estiren de más en pantallas anchas */
+  padding: 12px 0; /* Relleno vertical idéntico */
+  border-radius: 50px; /* Forma de píldora redonda */
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* Botón específico de Crontu */
+.btn-crontu {
+  background: linear-gradient(
+    to right,
+    #6b7bfc,
+    #8594ff
+  ); /* Degradado lila/azul pastel */
+  color: #0d123a; /* Color de texto azul oscuro */
+  max-width: 150px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+/* Pequeño efecto visual interactivo al pulsar */
+.contact-btn:active {
+  transform: scale(0.95);
+  filter: brightness(0.7);
+}
+
+/* ===========================
+   Footer Section
+=========================== */
+.main-footer {
+  margin-top: -1px;
+  background-color: var(--secondary-color); /* Tu azul marino oscuro #031926 */
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--text-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Separador sutil superior */
+}
+
+/* Bloque de Identidad */
+.footer-branding {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Controla la separación entre las tres líneas de texto de arriba */
+}
+
+.footer-dr-name {
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.footer-dr-specialty {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-cyan); /* El azul brillante de la especialidad */
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.footer-dr-tagline {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* Bloque de Datos de Contacto */
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Separación cómoda entre el teléfono y el correo electrónico */
+}
+
+/* Estilos base para los enlaces */
+.footer-link {
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.footer-phone {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-light); /* El tono de azul pastel/claro para el número */
+  letter-spacing: 0.5px;
+}
+
+.footer-email {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  opacity: 0.9;
+}
+
+/* Efecto visual táctil para dispositivos móviles */
+.footer-link:active {
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   VERSION DESKTOP (Pantallas mayores a 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+  /* --- Estilos de Estructura General --- */
+  .container {
+    width: min(1200px, 85%);
+  }
+
+  /* --- Navigation / Top Header --- */
+  header {
+    background-color: var(--secondary-color);
+  }
+
+  .hero-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px min(1200px, 5%);
+    text-align: left;
+  }
+  .dr-info {
+    display: block;
+    color: var(--text-light);
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .dr-name {
+    font-size: 24px;
+    display: inline-block;
+    margin-right: 15px;
+    padding-right: 16px;
+    border-right: 1px solid #052234;
+  }
+
+  .dr-specialty {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  /* Contenedor flotante para meter los dos botones arriba a la derecha */
+  .hero-header .header-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .hero-header .whatsapp-button {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+  }
+
+  .btn-crontu-header {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    background: linear-gradient(
+      to right,
+      #6b7bfc,
+      #8594ff
+    ); /* Tu degradado lila */
+    color: #0d123a;
+    padding: 0 24px; /* Quitamos el padding vertical para que mande el height */
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+  }
+
+  /* --- Hero Principal (Sección Azul Grande) --- */
+  .hero {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .hero-image {
+    display: none;
+  }
+
+  .hero-desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  /* --- Sección About (El Doctor) - PERFECTAMENTE CENTRADO --- */
+
+  /* 1. Contenedor principal: Grid simétrico de 12 columnas */
+  .about {
+    height: auto;
+    background-color: #e9ecef; /* Fondo gris plano continuo */
+    padding: 100px 0; /* Espaciado premium arriba y abajo */
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px; /* Espacio de separación entre el texto y la foto */
+    align-items: center; /* Centra verticalmente el texto y la foto */
+  }
+
+  /* Mantenemos las olas completamente ocultas en escritorio */
+  .about .wave-divider {
+    display: none !important;
+  }
+
+  /* 2. El bloque de Texto (Simbólicamente en la mitad izquierda del centro) */
+  .about-content {
+    grid-column: 3 / span 5; /* Ocupa 5 columnas (Deja exactamente 2 columnas vacías a la izquierda) */
+    grid-row: 1; /* Forzado en la misma fila horizontal */
+    position: static;
+    background-color: transparent;
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-content .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  /* Alineación de los títulos */
+  .about-title-prefix,
+  .about-name,
+  .about-specialty-blue {
+    text-align: right; /* Fluye de manera natural hacia la foto que está a su derecha */
+    display: block;
+  }
+
+  /* Justificación estética del párrafo */
+  .about-text {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-top: 15px;
+
+    text-align: justify; /* Párrafo perfectamente rectilíneo en sus bordes */
+    text-align-last: right; /* La última línea descansa limpiamente a la izquierda */
+  }
+
+  /* 3. El bloque de la Foto (Simbólicamente en la mitad derecha del centro) */
+  .about-image-container {
+    grid-column: 8 / span 3; /* Ocupa 3 columnas (Deja exactamente 2 columnas vacías a la derecha) */
+    grid-row: 1; /* ¡Misma fila exacta que el texto! */
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-left: -25px;
+  }
+
+  /* La foto mantiene su tamaño compacto e idéntico a tu referencia */
+  .doctor-profile-img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra sutil premium */
+  }
+
+  /* --- Sección FAQ (Preguntas Frecuentes) --- */
+
+  .faq .container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Columna izquierda pequeña para títulos, derecha grande para acordeón */
+    gap: 20px;
+    align-items: start;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .faq-main-title {
+    grid-column: 1 / span 2; /* El título principal se queda arriba centrado */
+    margin-bottom: 50px;
+  }
+  .faq-desc{
+    display:block;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-top: 25px;
+    text-align: justify;
+    justify-content: left;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .faq-footer-mobile {
+    display: none;
+  }
+
+  .faq-footer .faq-footer-text{
+      font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #111111;
+  font-weight: 400;
+  }
+  /* ===========================
+   FAQ Footer (Bloque Whatsapp)
+=========================== */
+.faq-footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+
+/* Modificación de tu botón para que acepte dos líneas de texto */
+.faq-footer .whatsapp-button {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 12px 45px;
+  text-align: center;
+}
+
+  .faq-list {
+    grid-column: 2;
+  }
+
+  /* --- Sección Contacto --- */
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact-title {
+    font-size: 70px;
+  }
+
+  .contact-buttons-group {
+    gap: 25px;
+  }
+
+  .contact-btn {
+    max-width: 200px;
+    padding: 14px 0;
+  }
+
+  /* --- Footer --- */
+  .main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+.contact-buttons-group .contact-btn{
+  max-width: 160px;
+}
+  .footer-branding {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .footer-contact-info {
+    text-align: right;
+    align-items: flex-end;
+    gap: 8px;
+  }
+}
