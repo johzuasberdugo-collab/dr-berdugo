@@ -15,7 +15,21 @@
 
       gtag("config", "AW-18299911969");
     </script>
-    
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            // Modificado para soportar apertura en pestañas nuevas si es necesario
+            window.open(url, "_blank");
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-18299911969/F-LhCJyA_8ocEKH-iZZE",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,18 +62,22 @@
           <div><p class="dr-info">Agenda tu cita:</p></div>
           <button
             onclick="
-              window.open(
+              return gtag_report_conversion(
                 'https://wa.me/541130171421?text=Hola,%20Dr.%20Berdugo.%20Deseo%20solicitar%20informaci%C3%B3n%20para%20agendar%20una%20cita.',
-                '_blank',
-              )
+              );
             "
             class="whatsapp-button"
           >
             Whatsapp
           </button>
           <a
-            href="https://crontu.com.ar/berdugo-jahzel"
+            href="https://crontu.com.ar/berdugo-jahzel/turno"
             target="_blank"
+            onclick="
+              return gtag_report_conversion(
+                'https://crontu.com.ar/berdugo-jahzel/turno',
+              );
+            "
             rel="noopener noreferrer"
             class="contact-btn btn-crontu btn-crontu-header"
             style="max-width: 120px; padding: 8px 20px; font-size: 15px"
@@ -153,10 +171,9 @@
               </p>
               <button
                 onclick="
-                  window.open(
+                  return gtag_report_conversion(
                     'https://wa.me/541130171421?text=Tengo%20una%20pregunta%20Dr.%20Berdugo:%20',
-                    '_blank',
-                  )
+                  );
                 "
                 class="contact-btn whatsapp-button font-lato"
               >
@@ -250,10 +267,9 @@
             </p>
             <button
               onclick="
-                window.open(
+                return gtag_report_conversion(
                   'https://wa.me/541130171421?text=Tengo%20una%20pregunta%20Dr.%20Berdugo:%20',
-                  '_blank',
-                )
+                );
               "
               class="whatsapp-button font-lato"
             >
@@ -277,6 +293,11 @@
           <div class="contact-buttons-group">
             <a
               href="https://wa.me/541130171421?text=Hola,%20quiero%20coordinar%20un%20turno%20para%20una%20consulta%20con%20el%20Dr.%20Berdugo."
+              onclick="
+                return gtag_report_conversion(
+                  'https://wa.me/541130171421?text=Hola,%20quiero%20coordinar%20un%20turno%20para%20una%20consulta%20con%20el%20Dr.%20Berdugo.',
+                );
+              "
               target="_blank"
               rel="noopener noreferrer"
               class="contact-btn whatsapp-button"
@@ -285,7 +306,12 @@
             </a>
 
             <a
-              href="https://crontu.com.ar/berdugo-jahzel"
+              href="https://crontu.com.ar/berdugo-jahzel/turno"
+              onclick="
+                return gtag_report_conversion(
+                  'https://crontu.com.ar/berdugo-jahzel/turno',
+                );
+              "
               target="_blank"
               rel="noopener noreferrer"
               class="contact-btn btn-crontu"
