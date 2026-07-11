@@ -607,6 +607,7 @@ nav {
       #8594ff
     ); /* Tu degradado lila */
     color: #0d123a;
+    max-width: 200px;
     padding: 0 24px; /* Quitamos el padding vertical para que mande el height */
     border-radius: 50px;
     display: inline-flex;
