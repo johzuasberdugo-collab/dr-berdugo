@@ -92,6 +92,7 @@ nav {
 }
 
 .whatsapp-button {
+  text-decoration: none;
   font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: 900;
@@ -230,10 +231,10 @@ nav {
 /* ===========================
    FAQ
 =========================== */
-.faq-footer{
+.faq-footer {
   display: none;
 }
-.faq-desc{
+.faq-desc {
   display: none;
 }
 .faq {
@@ -593,6 +594,12 @@ nav {
     align-items: center;
     justify-content: center;
     height: 40px;
+    text-decoration: none;
+  }
+
+  .hero-header .whatsapp-button:active {
+    transform: scale(0.95);
+    filter: brightness(0.7);
   }
 
   .btn-crontu-header {
@@ -615,7 +622,10 @@ nav {
     justify-content: center;
     height: 40px;
   }
-
+  .btn-crontu-header:active {
+    transform: scale(0.95);
+    filter: brightness(0.7);
+  }
   /* --- Hero Principal (Sección Azul Grande) --- */
   .hero {
     height: auto;
@@ -727,8 +737,8 @@ nav {
     grid-column: 1 / span 2; /* El título principal se queda arriba centrado */
     margin-bottom: 50px;
   }
-  .faq-desc{
-    display:block;
+  .faq-desc {
+    display: block;
     font-family: "Lato", sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -744,34 +754,33 @@ nav {
     display: none;
   }
 
-  .faq-footer .faq-footer-text{
-      font-family: "Lato", sans-serif;
-  font-size: 16px;
-  color: #111111;
-  font-weight: 400;
+  .faq-footer .faq-footer-text {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: #111111;
+    font-weight: 400;
   }
   /* ===========================
    FAQ Footer (Bloque Whatsapp)
 =========================== */
-.faq-footer {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-}
+  .faq-footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
 
-
-/* Modificación de tu botón para que acepte dos líneas de texto */
-.faq-footer .whatsapp-button {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 1.2;
-  padding: 12px 45px;
-  text-align: center;
-}
+  /* Modificación de tu botón para que acepte dos líneas de texto */
+  .faq-footer .whatsapp-button {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 12px 45px;
+    text-align: center;
+  }
 
   .faq-list {
     grid-column: 2;
@@ -802,9 +811,9 @@ nav {
     align-items: center;
     text-align: left;
   }
-.contact-buttons-group .contact-btn{
-  max-width: 160px;
-}
+  .contact-buttons-group .contact-btn {
+    max-width: 160px;
+  }
   .footer-branding {
     margin-bottom: 0;
     text-align: left;
